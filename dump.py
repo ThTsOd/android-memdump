@@ -6,7 +6,7 @@ BLOCKSIZE = 0x1000
 
 
 def create_cmd(cmd):
-     return ["nox_adb", "shell", "su -c '{}'".format(cmd)]
+     return ["adb", "shell", "su -c '{}'".format(cmd)]
 
 def dump_memory(pid):
      cmd = create_cmd("cat /proc/{}/maps".format(pid))
